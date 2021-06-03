@@ -9,4 +9,8 @@ class Person
     @specialties = []
   end
 
+  def add_specialty(specialty_field)
+    @specialties << specialty_field
+  end
+
 end
