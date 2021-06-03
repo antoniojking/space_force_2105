@@ -13,5 +13,10 @@ describe Spacecraft do
     expect(daedalus).to be_an(Spacecraft)
     expect(daedalus.name).to eq('Daedalus')
     expect(daedalus.fuel).to eq(400)
+    expect(daedalus.requirements).to eq([])
+  end
+
+  it 'adds requirements to spacecraft' do
+
   end
 end
