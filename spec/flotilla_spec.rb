@@ -94,13 +94,17 @@ describe Flotilla do
     daedalus.add_requirement(req_1)
     daedalus.add_requirement(req_2)
 
-    recommend_daedalus = [kathy, sampson]
-
-    expect(seventh_flotilla.recommend_personnel(daedalus)).to eq(recommend_daedalus)
+    seventh_flotilla.add_ship(daedalus)
 
     odyssey = Spacecraft.new({name: 'Odyssey', fuel: 300})
     odyssey.add_requirement({operations: 6})
     odyssey.add_requirement({maintenance: 3})
+
+    seventh_flotilla.add_ship(odyssey)
+
+    recommend_daedalus = [kathy, sampson]
+
+    expect(seventh_flotilla.recommend_personnel(daedalus)).to eq(recommend_daedalus)
 
     recommend_odyssey = [polly]
 
