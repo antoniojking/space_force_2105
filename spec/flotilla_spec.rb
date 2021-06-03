@@ -12,4 +12,19 @@ describe Flotilla do
     expect(seventh_flotilla.personnel).to eq([])
     expect(seventh_flotilla.ships).to eq([])
   end
+
+  it 'adds ship to designation' do
+    seventh_flotilla = Flotilla.new({designation: 'Seventh Flotilla'})
+
+    craft_daed = {
+      name: 'Daedalus',
+      fuel: 400
+    }
+
+    daedalus = Spacecraft.new(craft_daed)
+
+    seventh_flotilla.add_ship(daedalus)
+
+    expect(seventh_flotilla.ships).to eq([daedalus])
+  end
 end

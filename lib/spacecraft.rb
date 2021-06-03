@@ -8,4 +8,8 @@ class Spacecraft
     @fuel         = spacecraft_data[:fuel]
     @requirements = []
   end
+
+  def add_requirement(expert_req)
+    @requirements << expert_req
+  end
 end
