@@ -1,7 +1,7 @@
 require 'rspec'
 require './lib/spacecraft'
 
-descibe Spacecraft do
+describe Spacecraft do
   it 'exists and has attributes' do
     daedalus = Spacecraft.new({name: 'Daedalus', fuel: 400})
 
